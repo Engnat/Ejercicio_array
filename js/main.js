@@ -5,13 +5,18 @@ var pageLoaded = function(){
 document.addEventListener("DOMContentLoaded" , function(){
 
   var array = [1,2,3,4,5,6,7,8,9,0];
+  var index_some = -1;
   var res_some = array.some(function(number , index){
-    return number > 10;
-  });
-  var res_every = array.every(function(number , index){
+    index_some = index;
     return number < 10;
   });
-  console.log(res_some , res_every );
+  console.log(res_some , index_some);
+  var index_every = -1;
+  var res_every = array.every(function(number , index){
+    index_every = index;
+    return number < 10;
+  });
+  console.log(res_every , index_every );
   /*var hash = {
     key: "value1",
     key1: "value2",
