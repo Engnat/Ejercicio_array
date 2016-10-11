@@ -3,19 +3,35 @@ var pageLoaded = function(){
   console.log("Página Cargada");
 };
 document.addEventListener("DOMContentLoaded" , function(){
-  var hash = {
-    key: "value",
-    key1: "value",
-    key2: "value",
-    key3: "value",
-    key4: "value",
-    key5: "value",
-    key6: "value",
-    key7: "value",
-    key8: "value",
+
+  var array = [1,2,3,4,5,6,7,8,9,0];
+  var res = array.some(function(number , index){
+    return number > 20;
+  });
+  console.log(res);
+  /*var hash = {
+    key: "value1",
+    key1: "value2",
+    key2: "value3",
+    key3: "value4",
+    key4: "value5",
+    key5: "value6",
+    key6: "value7",
+    key7: "value8",
+    key8: "value9",
   };
 
-  console.log(hash);
+  var miArraicito = [];
+  for(var key in hash){ //Recorre la posicion "key" en  el objeto hash
+
+    miArraicito.push(key);//Estoy llenando mi arreglo
+    miArraicito.push(hash[key]);//muestro el valor que este en la posicion "key"
+
+  }
+
+  console.log(miArraicito.reverse());//imprime los valores al contrario
+  console.log(miArraicito);*/
+  //console.log(hash);
   /*var list_li = document.querySelectorAll(".list_item");//devuelve los elementos dentro de un array
   list_li = Array.from(list_li);
   console.log("Primer For each");
